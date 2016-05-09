@@ -1,0 +1,21 @@
+img {
+	max-width: 26em;
+	display: block;
+	margin: 0 auto;
+	margin-top: 3em;
+
+}
+
+#tv-box {
+	position: relative;
+	top: -18em;
+	max-width: 15em;
+	margin: 0 auto;
+	font-size: 1.2em;
+}
+.question {
+	text-align: justify;
+}
+.choice {
+	list-style: none;
+}
