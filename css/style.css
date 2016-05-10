@@ -3,8 +3,8 @@ body {
 }
 
 #start {
-	float:left;
-	margin-top: 7.4em;
+	margin: 1em;
+	cursor: pointer;
 }
 
 #title {
