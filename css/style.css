@@ -1,12 +1,9 @@
 body {
-	font-size: 1em;
 	font-family: 'Orbitron', sans-serif;
 }
 #title {
-	position: absolute;
-	left: 21%;
-	top: 26%;
-	font-size: 2.6rem;
+	font-size: 2.6em;
+	text-align: center;
 }
 #tv {
 	max-width: 26em;
@@ -16,15 +13,24 @@ body {
 }
 
 #tv-box {
-	position: relative;
-	top: -18em;
-	max-width: 15%;
+	width: 500px;
 	margin: 0 auto;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	font-weight: 900;
+	padding: 5em;
+	height: 292px;
+	background-image: url('../img/tv.gif');
+	background-repeat: no-repeat;
+	display: block;
 }
+
+#tv-box>p {
+	padding-right: 7em;
+}
+
 .question {
 	text-align: justify;
+	
 }
 .choice {
 	list-style: none;
