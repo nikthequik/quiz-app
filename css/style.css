@@ -39,6 +39,16 @@ body {
 	top: 34em;
 }
 
+.lifebox {
+	position: absolute;
+	top: 25em;
+	left: 30em;
+}
+
+.life {
+	width: 20px;
+}
+
 .question {
 	text-align: justify;
 	
