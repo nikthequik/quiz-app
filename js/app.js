@@ -31,7 +31,7 @@ $(function() {
 		correct: 0,
 		qnum: 5,
 		explanation: 'Pac-Man may be one of the most ubiquitous characters in video gaming history.  This game sold over 400,000 units and still acts as a symbol of retro gaming.'
-		},
+		}
 	];
 
 
