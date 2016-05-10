@@ -36,11 +36,17 @@ $(function() {
 		}
 	];
 
+	function nextQuestion() {
+		$('#qbox').text(questions[currentQuestion].question);
+		$('.choicebox').html('<li class="choice"><input type="radio" name="choice" value="0">' + questions[currentQuestion].choices[0] + '</li><li class="choice"><input type="radio" name="choice" value="1">' + questions[currentQuestion].choices[1] + '</li><li class="choice"><input type="radio" name="choice" value = "2">' + questions[currentQuestion].choices[2] + '</li><li class="choice"><input type="radio" name="choice" value="3">' + questions[currentQuestion].choices[3] + '</li><button class="submit" type="submit">Submit</button>');
+	}
+
 	$('#start').on('click', function() {
 		console.log($(this));
-		$(this).hide('slow');
-		$('#qbox').text(questions[currentQuestion].question);
+		$(this).hide();
+		nextQuestion();
 	});
+
 
 
 
