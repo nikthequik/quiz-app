@@ -42,13 +42,15 @@ body {
 
 #hud {
 	position: absolute;
-	top: 34em;
+    left: 21em;
+    top: 21em;
+    font-size: 1.2rem;
 }
 
 .lifebox {
 	position: absolute;
-	top: 25em;
-	left: 30em;
+    top: 24.7em;
+    left: 30.7em;
 }
 
 .life {

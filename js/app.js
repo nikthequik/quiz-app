@@ -1,5 +1,7 @@
 $(function() {
-	var lifeCounter = 4;
+	var lifeCounter = 4,
+		currentQuestion = 0,
+		currentLevel = 1;
 
 	var questions = [{
 		question: "In 2015, the New Horizons space probe sent us back the best pictures to date of the planet Pluto.  Which gaming console contained the same CPU as the space probe?",
@@ -33,6 +35,12 @@ $(function() {
 		explanation: 'Pac-Man may be one of the most ubiquitous characters in video gaming history.  This game sold over 400,000 units and still acts as a symbol of retro gaming.'
 		}
 	];
+
+	$('#start').on('click', function() {
+		console.log($(this));
+		$(this).hide('slow');
+		$('#qbox').text(questions[currentQuestion].question);
+	});
 
 
 
