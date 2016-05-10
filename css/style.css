@@ -34,6 +34,12 @@ body {
 	padding-right: 7em;
 }
 
+.choicebox {
+	position: absolute;
+    left: 31em;
+    top: 18.3em;
+}
+
 #hud {
 	position: absolute;
 	top: 34em;
@@ -51,8 +57,16 @@ body {
 
 .question {
 	text-align: justify;
-	
 }
+
+.answers {
+	margin-bottom: 0;
+}
+
+.submit {
+	margin-left: 8em;
+}
+
 .choice {
 	list-style: none;
 }
