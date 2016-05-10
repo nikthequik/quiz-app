@@ -1,6 +1,12 @@
 body {
 	font-family: 'Orbitron', sans-serif;
 }
+
+#start {
+	float:left;
+	margin-top: 7.4em;
+}
+
 #title {
 	font-size: 2.6em;
 	text-align: center;
@@ -13,7 +19,7 @@ body {
 }
 
 #tv-box {
-	width: 500px;
+	width: 484px;
 	margin: 0 auto;
 	font-size: 1.2em;
 	font-weight: 900;
@@ -26,6 +32,11 @@ body {
 
 #tv-box>p {
 	padding-right: 7em;
+}
+
+#hud {
+	position: absolute;
+	top: 34em;
 }
 
 .question {

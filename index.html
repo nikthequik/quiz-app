@@ -9,7 +9,14 @@
 </head>
 <body>
 	<h1 id="title">Video Game Console Quiz</h1>
-	<div id="tv-box"><p>In 2015, the New Horizons space probe sent us back the best pictures to date of the planet Pluto.  Which gaming console contained the same CPU as the space probe?</p></div>
+	<div id="start"><img src="img/start.png" alt="Start"></div>
+	<div id="tv-box">
+		<p>In 2015, the New Horizons space probe sent us back the best pictures to date of the planet Pluto.  Which gaming console contained the same CPU as the space probe?</p>
+		<h6 id="hud">Level <span class='level'>1</span><br> Lives Remaining: </h6>
+		
+	</div>
+
+
 
 	<!-- Questions and Choices -->
 	<div class="question-box">
@@ -60,7 +67,7 @@
 
 	<!-- Results -->
 	<div id="results">
-		<p>You ended up at level <span id="level">1</span> with <span id="livesRemaining">5</span> lives left!</p>
+		<p>You ended up at level <span class="level">1</span> with <span id="livesRemaining">5</span> lives left!</p>
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
