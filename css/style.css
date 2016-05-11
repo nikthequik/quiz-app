@@ -19,6 +19,7 @@ body {
 }
 
 #tv-box {
+	position: relative;
 	width: 484px;
 	margin: 0 auto;
 	font-size: 1.2em;
@@ -48,21 +49,21 @@ body {
 
 .choicebox {
 	position: absolute;
-    left: 8.1em;
-    top: -1.7em;
+    left: 13.3em;
+    top: 13.3em;
 }
 
 #hud {
 	position: absolute;
-    left: -1.4em;
-    top: -1.2em;
+    left: 3.6em;
+    top: 15.5em;
     font-size: 1.2rem;
 }
 
 .lifebox {
-	position: relative;
-    top: 2.5em;
-    left: 8.7em;
+    position: absolute;
+    top: 19.2em;
+    left: 13.7em;
 }
 
 .life {
@@ -78,8 +79,9 @@ body {
 }
 
 .sub {
+
 	margin-left: 6.7em;
-	margin-top: 0.9em;
+	margin-top: 0.4em;
 	font-family: 'Orbitron', sans-serif;
 	font-weight: bold;
 }
