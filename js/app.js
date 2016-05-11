@@ -37,7 +37,8 @@ $(function() {
 	}];
 
 	function nextQuestion() {
-		$('.choicebox').show;
+		$('.choicebox').show();
+		$('.sub').show();
 		$('#qbox').text(questions[currentQuestion].question);
 		$('.choicebox').html('<li class="choice"><input type="radio" name="choice" value="0">' + questions[currentQuestion].choices[0] + '</li><li class="choice"><input type="radio" name="choice" value="1">' + questions[currentQuestion].choices[1] + '</li><li class="choice"><input type="radio" name="choice" value = "2">' + questions[currentQuestion].choices[2] + '</li><li class="choice"><input type="radio" name="choice" value="3">' + questions[currentQuestion].choices[3] + '</li><button class="sub" type="button">Submit</button>');
 	};
@@ -67,5 +68,13 @@ $(function() {
 	$('#tv-box').on('click', '.sub', function() {
 		checkCorrect();
 	});
+
+	$('#tv-box').on('click', '#levelup', function() {
+		var exp = questions[currentQuestion-1].explanation;
+		$('#qbox').text(exp);
+		$('#qbox').on('click', nextQuestion);
+	});
+
+
 
 });
