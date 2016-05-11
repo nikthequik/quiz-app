@@ -1,7 +1,8 @@
 $(function() {
 	var lifeCounter = 4,
 		currentQuestion = 0,
-		currentLevel = 1;
+		currentLevel = 1,
+		results = 'You ended up at level <span class="level">1</span> with <span id="livesRemaining">5</span> lives left!';
 
 	var questions = [{
 		question: "In 2015, the New Horizons space probe sent us back the best pictures to date of the planet Pluto.  Which gaming console contained the same CPU as the space probe?",
@@ -43,15 +44,17 @@ $(function() {
 	function checkCorrect() {
 		var attempt = parseInt($('input[type="radio"]:checked').val());
 		$('.choicebox').hide();
+		$('.sub').hide();
 		if (attempt === questions[currentQuestion].correct) {
 			currentLevel++;
-			$('#qbox').text('Level Up!')
+			$('#qbox').html('<h1 id="levelup">Level Up!</h1>');
 			$('.level').text(currentLevel);
 		}
 		else {
 
 			$('.life' + lifeCounter).hide();
 			lifeCounter--;
+			$('#qbox').html('<h1 id="levelup">Lost A Life!</h1>');
 		}
 		currentQuestion++;
 	};

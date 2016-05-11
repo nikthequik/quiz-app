@@ -75,3 +75,8 @@ body {
 .choice {
 	list-style: none;
 }
+
+#levelup {
+	text-align: center;
+    margin-top: 3em;
+}
