@@ -34,23 +34,35 @@ body {
 	padding-right: 7em;
 }
 
+.choiceContainer {
+	position: relative;
+}
+
+.hudContainer {
+	position: relative;
+}
+
+.lifeContainer {
+	position: relative;
+}
+
 .choicebox {
 	position: absolute;
-    left: 31em;
-    top: 18.3em;
+    left: 8.1em;
+    top: -1.7em;
 }
 
 #hud {
 	position: absolute;
-    left: 21em;
-    top: 21em;
+    left: -1.4em;
+    top: -1.2em;
     font-size: 1.2rem;
 }
 
 .lifebox {
-	position: absolute;
-    top: 24.7em;
-    left: 30.7em;
+	position: relative;
+    top: 2.5em;
+    left: 8.7em;
 }
 
 .life {
