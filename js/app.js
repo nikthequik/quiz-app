@@ -35,7 +35,14 @@ $(function() {
 		qnum: 5,
 		explanation: 'Pac-Man may be one of the most ubiquitous characters in video gaming history.  This game sold over 400,000 units and still acts as a symbol of retro gaming.'
 	}];
-
+	function newGame() {
+		lifeCounter = 4,
+		currentQuestion = 0,
+		currentLevel = 1
+		$('.life1, .life2, .life3, .life4').show();
+		$('.level').text(currentLevel);
+		$('#start').show();
+	};
 	function nextQuestion() {
 		$('.choicebox').show();
 		$('.sub').show();
@@ -44,8 +51,7 @@ $(function() {
 	};
 	function checkCorrect() {
 		var attempt = parseInt($('input[type="radio"]:checked').val());
-		$('.choicebox').hide();
-		$('.sub').hide();
+		$('.choicebox, .sub').hide();
 		if (attempt === questions[currentQuestion].correct) {
 			currentLevel++;
 			$('#qbox').html('<h1 id="levelup">Level Up!</h1>');
@@ -70,9 +76,28 @@ $(function() {
 	});
 
 	$('#tv-box').on('click', '#levelup', function() {
-		var exp = questions[currentQuestion-1].explanation;
-		$('#qbox').text(exp);
-		$('#qbox').on('click', nextQuestion);
+		var exp = '<p class="exp">' + questions[currentQuestion-1].explanation+ '</p>';
+		$('#qbox').html(exp);
+		$('#qbox').on('click', '.exp', function() {
+			$('.exp').hide();
+			if (lifeCounter === 0) {
+				$('#qbox').html('<h1 id="gameover">Game Over</h1><h4 class="retry">Try Again</h4>');
+				$('#qbox').on('click', '.retry', function() {
+					$('#gameover, .retry').hide();
+					newGame();
+				});
+			}
+			else if (currentQuestion >= 5) {
+				$('#qbox').html('<h3 id="results">You ended up at level <span class="level">' + currentLevel + '</span> with <span id="livesRemaining">' + lifeCounter + '</span> lives left!</h3><h4 class="retry">Try Again</h4>');
+				$('#qbox').on('click', '.retry', function() {
+					$('#results, .retry').hide();
+					newGame();
+				});
+			}
+			else {
+				nextQuestion();
+			}
+		});
 	});
 
 
