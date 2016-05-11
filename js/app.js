@@ -8,7 +8,7 @@ $(function() {
 		choices: ['XBox', 'Playstation', 'Dreamcast', 'Atari'],
 		correct: 1,
 		qnum: 1,
-		explanation: 'The IBM processor used in the Playstation was known for its reliability, making it a perfect choice for powering a probe for long journey'
+		explanation: 'The IBM processor used in the Playstation was known for its reliability, making it a perfect choice for powering a probe for long journey.'
 		},{
 		question: "What was the first video game console called?",
 		choices: ['Atari', 'Pong', 'Brown Box', 'NES'],
@@ -20,7 +20,7 @@ $(function() {
 		choices: ['Playstation 2', 'XBox 360', 'Nintendo 64', 'GameBoy'],
 		correct: 0,
 		qnum: 3,
-		explanation: ''
+		explanation: 'When the Playstation 2 launched in 2000, there were long lines at every vendor.  To date they have sold over 157 million units.'
 		},{
 		question: "What was the first video game system to utilize DVD technology?",
 		choices: ['Dreamcast', 'Playstation', 'Playstation 2', 'XBox'],
@@ -33,23 +33,27 @@ $(function() {
 		correct: 0,
 		qnum: 5,
 		explanation: 'Pac-Man may be one of the most ubiquitous characters in video gaming history.  This game sold over 400,000 units and still acts as a symbol of retro gaming.'
-		}
-	];
+	}];
 
 	function nextQuestion() {
+		$('.choicebox').show;
 		$('#qbox').text(questions[currentQuestion].question);
-		$('.choicebox').html('<li class="choice"><input type="radio" name="choice" value="0">' + questions[currentQuestion].choices[0] + '</li><li class="choice"><input type="radio" name="choice" value="1">' + questions[currentQuestion].choices[1] + '</li><li class="choice"><input type="radio" name="choice" value = "2">' + questions[currentQuestion].choices[2] + '</li><li class="choice"><input type="radio" name="choice" value="3">' + questions[currentQuestion].choices[3] + '</li><button class="submit" type="button">Submit</button>');
+		$('.choicebox').html('<li class="choice"><input type="radio" name="choice" value="0">' + questions[currentQuestion].choices[0] + '</li><li class="choice"><input type="radio" name="choice" value="1">' + questions[currentQuestion].choices[1] + '</li><li class="choice"><input type="radio" name="choice" value = "2">' + questions[currentQuestion].choices[2] + '</li><li class="choice"><input type="radio" name="choice" value="3">' + questions[currentQuestion].choices[3] + '</li><button class="sub" type="button">Submit</button>');
 	};
 	function checkCorrect() {
-		console.log('fire');
-		var attempt = $('input[type="radio"]:checked').val();
-		if (attempt === question[currentQuestion].correct) {
+		var attempt = parseInt($('input[type="radio"]:checked').val());
+		$('.choicebox').hide();
+		if (attempt === questions[currentQuestion].correct) {
 			currentLevel++;
+			$('#qbox').text('Level Up!')
+			$('.level').text(currentLevel);
 		}
 		else {
+
 			$('.life' + lifeCounter).hide();
 			lifeCounter--;
 		}
+		currentQuestion++;
 	};
 
 	$('#start').on('click', function() {
@@ -57,8 +61,7 @@ $(function() {
 		nextQuestion();
 	});
 
-	$('.submit').on('click', '.submit', function(e) {
-		e.preventDefault();
+	$('#tv-box').on('click', '.sub', function() {
 		checkCorrect();
 	});
 
