@@ -42,8 +42,10 @@ $(function() {
 		$('.life1, .life2, .life3, .life4').show();
 		$('.level').text(currentLevel);
 		$('#start').show();
+		$('#backdrop').slideUp();
 	};
 	function nextQuestion() {
+		$('#backdrop').slideDown();
 		$('.choicebox').show();
 		$('.sub').show();
 		$('#qbox').text(questions[currentQuestion].question);

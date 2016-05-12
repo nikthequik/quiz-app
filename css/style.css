@@ -37,12 +37,13 @@ body {
 }
 
 #backdrop {
+	display: none;
 	background-color: orange;
     height: 384px;
     width: 481px;
     z-index: -5;
-    top: 1em;
-    right: 8.7em;
+    top: 2.2em;
+    right: 8.4em;
     position: absolute;
 }
 
