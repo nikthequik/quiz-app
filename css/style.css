@@ -31,8 +31,19 @@ body {
 	display: block;
 }
 
-#tv-box>p {
+#tv-box > p {
 	padding-right: 7em;
+	
+}
+
+#backdrop {
+	background-color: orange;
+    height: 384px;
+    width: 481px;
+    z-index: -5;
+    top: 1em;
+    right: 8.7em;
+    position: absolute;
 }
 
 .choiceContainer {

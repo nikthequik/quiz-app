@@ -54,19 +54,20 @@ $(function() {
 		$('.choicebox, .sub').hide();
 		if (attempt === questions[currentQuestion].correct) {
 			currentLevel++;
-			$('#qbox').html('<h1 id="levelup">Level Up!</h1>');
+			$('#qbox').hide().html('<h1 id="levelup">Level Up!</h1>').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast');
 			$('.level').text(currentLevel);
 		}
 		else {
 
 			$('.life' + lifeCounter).hide();
 			lifeCounter--;
-			$('#qbox').html('<h1 id="levelup">Lost A Life!</h1>');
+			$('#qbox').hide().html('<h1 id="levelup">Lost A Life!</h1>').fadeIn('fast').fadeOut('fast').fadeIn('fast').fadeOut('fast').fadeIn('fast');
 		}
 		currentQuestion++;
 	};
 
 	$('#start').on('click', function() {
+		
 		$(this).hide();
 		nextQuestion();
 	});
