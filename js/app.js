@@ -75,7 +75,11 @@ $(function() {
 	});
 
 	$('#tv-box').on('click', '.sub', function() {
-		checkCorrect();
+		console.log($('input[type="radio"]:checked').val());
+		if ($('input[type="radio"]:checked').val()) {
+			checkCorrect();
+		}
+		
 	});
 
 	$('#tv-box').on('click', '#levelup', function() {
